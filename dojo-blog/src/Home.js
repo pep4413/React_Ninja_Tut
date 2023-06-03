@@ -4,10 +4,19 @@ const Home = () => {
     // let name = 'Patrick'
     const [name, setName] = useState('Patrick')
     const [age, setAge] = useState(44)
+    const [clickCount, setClickCount] = useState(true)
 
     const handleClick = () => {
-        setName("Luigi")
-        setAge(22)
+        if (clickCount) {
+            setName("Luigi")
+            setAge(22)
+            setClickCount(false)
+        } else {
+            setName("Patrick")
+            setAge(44)
+            setClickCount(true)
+        }
+        console.log(clickCount)
     }
 
 
